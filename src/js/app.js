@@ -10,7 +10,8 @@ btnRefresh.addEventListener("click", (e) => {
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("../service-worker.js", { scope: "./" })
+    // .register("../service-worker.js", { scope: "./" })
+    .register("https://strassee.github.io/ahj-workers-loading-frontend/service-worker.js", { scope: "./" })
     .then((reg) => {
       // регистрация сработала
       console.log("Registration succeeded. Scope is " + reg.scope);
