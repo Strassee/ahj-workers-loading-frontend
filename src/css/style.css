@@ -1,0 +1,147 @@
+body {
+    color: #000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.app {
+    margin: auto;
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+}
+
+.loading-news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    width: 400px;
+    /* height: 60px; */
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5px 5px;
+  width: 100%;
+}
+
+.btn-refresh {
+  background-color: #a7ffca;
+  border: 1px #00e75c solid;
+  cursor: pointer;
+}
+
+.news {
+  width: 100%;
+  position: relative;
+}
+
+.highlight {
+  min-height: 15px;
+  background-color: #a6a6a6;
+  background: linear-gradient(0.125turn, #a6a6a6, #fefefe);
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+  background-size: 200% 200%;
+  animation: backgrounds 3s ease infinite;
+}
+
+@keyframes backgrounds {
+  0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px 5px;
+    width: 100%;
+    border: #000 1px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px 0px;
+    word-break: break-all;
+}
+
+.news-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-content {
+  display: flex;
+  gap: 5px 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-title {
+  width: 60%;
+  font-weight: bold;
+}
+
+.news-time {
+  width: 30%;
+  text-align: right;
+  /* font-weight: bold; */
+  font-size: 11px;
+}
+
+.news-image {
+  display: flex;
+  align-items: center;
+}
+
+.news-image-src {
+  vertical-align: middle;
+}
+
+.news-body {
+  display: flex;
+  flex-direction: column;
+  gap: 7px 0px;
+  width: 83%;
+}
+
+.no-connection {
+    display: none; /* скрыт по умолчанию */
+    /* темный фон при открытии модалки должен быть на всю страницу */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    z-index: 999; /* поверх всех элементов */
+    left: 0;
+    top: 0;
+    width: 100%; /* полная ширина */
+    height: 100%; /* полная высота */
+    background-color: rgba(255,255,255,0.8); /* цвет фона - прозрачный черный */
+  }
+
+  .no-connection-message {
+    color: #ff0000;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px 5px;
+  }
+  
+  input[type="button"], input[type="submit"] {
+    margin: 2px 0px;
+    height: 30px;
+    border-radius: 5px;
+  }
+  
